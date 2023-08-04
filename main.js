@@ -14,6 +14,8 @@ if (prefersLight) {
     document.documentElement.classList.add("light-theme");
 }
 
+// Tabs Toggle for the Blog section
+
 const tabs = document.querySelectorAll(".tabs .tab");
 
 tabs.forEach((tab) => {
@@ -32,3 +34,26 @@ tabs.forEach((tab) => {
         document.querySelector(selector).classList.add("show");
     });
 });
+
+// Views Counter
+const views = document.querySelector(".side .text--sm");
+const getViewsCount = async () => {
+    try {
+        const response = await fetch(
+            "https://rkt4nstjpl7w2xpn6hlba6hc7q0ytbnd.lambda-url.ca-central-1.on.aws"
+        );
+        if (!response.ok) {
+            throw new Error(
+                `Http Error: ${response.status} ${response.statusText}`
+            );
+        }
+
+        const data = await response.json();
+        views.textContent = `Views : ${data}`;
+    } catch (error) {
+        console.error("An Error has occurred:", error);
+        views.textContent = "Faild to load views";
+    }
+};
+
+getViewsCount();
