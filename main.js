@@ -39,9 +39,8 @@ tabs.forEach((tab) => {
 const views = document.querySelector(".side .text--sm");
 const getViewsCount = async () => {
     try {
-        const response = await fetch(
-            "https://rkt4nstjpl7w2xpn6hlba6hc7q0ytbnd.lambda-url.ca-central-1.on.aws"
-        );
+        const lambdaURL = process.env.LAMBDA_URL;
+        const response = await fetch(lambdaURL);
         if (!response.ok) {
             throw new Error(
                 `Http Error: ${response.status} ${response.statusText}`
