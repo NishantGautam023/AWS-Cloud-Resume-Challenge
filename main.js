@@ -39,8 +39,10 @@ tabs.forEach((tab) => {
 const views = document.querySelector(".side .text--sm");
 const getViewsCount = async () => {
     try {
-        const lambdaURL = process.env.LAMBDA_URL;
-        const response = await fetch(lambdaURL);
+        
+         const response = await fetch(
+            "https://rkt4nstjpl7w2xpn6hlba6hc7q0ytbnd.lambda-url.ca-central-1.on.aws"
+        );
         if (!response.ok) {
             throw new Error(
                 `Http Error: ${response.status} ${response.statusText}`
@@ -48,7 +50,7 @@ const getViewsCount = async () => {
         }
 
         const data = await response.json();
-        views.textContent = `Views : ${data}`;
+        views.textContent = `👀 views : ${data}`;
     } catch (error) {
         console.error("An Error has occurred:", error);
         views.textContent = "Faild to load views";
