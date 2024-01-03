@@ -7,7 +7,7 @@ Companies of all sizes and industries use cloud technologies to boost efficiency
 
 ## Architecture
 
-![Architecture Diagram](https://file.notion.so/f/f/6c0da47d-0ecd-43be-af30-cfa44ecc34ee/a359de65-2de9-49a8-9f20-ac2288e2787a/Untitled.png?id=382d99b3-3bf2-4d8c-95cb-9e8f3018c064&table=block&spaceId=6c0da47d-0ecd-43be-af30-cfa44ecc34ee&expirationTimestamp=1702339200000&signature=uvl6UrLub2fsv_VXvIBcXYF_s1jcawQD31O14B53Au0&downloadName=Untitled.png)
+![Architecture Diagram](./architecture_diagram.png)
 
 ## Overview
 
@@ -37,6 +37,7 @@ Companies of all sizes and industries use cloud technologies to boost efficiency
 8. **User-Friendly Metrics:**
    - 📈 The updated visitor count is reflected on the website.
 
+![Architecture Diagram](./github.png)
 
 
 
